@@ -23,7 +23,7 @@ public class DoorCode : MonoBehaviour
         }
         bool keyRequired = keyIdRequired >= 0; 
         bool keyMissing = !PlayerController.instance.keyIdsObtained.Contains(keyIdRequired);
-     
+        Debug.Log("KeyMissing" + keyMissing);
         if(keyRequired && keyMissing){
             shouldOpen = false; 
         }
