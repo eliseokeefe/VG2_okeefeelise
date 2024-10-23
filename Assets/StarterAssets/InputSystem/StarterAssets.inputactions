@@ -296,7 +296,7 @@
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Gamepad",
                     "action": "SecondaryAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
