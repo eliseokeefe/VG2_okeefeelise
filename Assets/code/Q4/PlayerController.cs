@@ -55,9 +55,6 @@ if(mouseInput.rightButton.wasPressedThisFrame){
 void OnInteract(){
     RaycastHit hit; 
    if(Physics.Raycast(povOrigin.position, povOrigin.forward, out hit, 2f)){
-    Door targetDoor = hit.transform.GetComponent<DoorCode>();
-   }
-    if(hitSomething){
         DoorCode targetDoor = hit.transform.GetComponent<DoorCode>(); 
         if(targetDoor){
             targetDoor.Interact();
@@ -67,7 +64,10 @@ void OnInteract(){
         {
             targetButton.Interact();
         }
-    }
+   }
+   
+       
+    
 }
 void OnPrimaryAttack(){
     RaycastHit hit; 
