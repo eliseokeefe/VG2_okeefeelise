@@ -3,7 +3,87 @@ guid: 83281bdc04ae212439b25b0f72b6c737
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Buttonsmat
+    second: {fileID: 2100000, guid: 4a26b47674f5c324caf8e7551ed3eb3d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eyesmat
+    second: {fileID: 2100000, guid: 8b557041d28571c4bb55ef4c673c813e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glovesmat
+    second: {fileID: 2100000, guid: b35382bb71734d448b1ee3cee372408e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair_Piecemat
+    second: {fileID: 2100000, guid: 51eb9e3a10db7904a9909a16ed7b0b1b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hairmat
+    second: {fileID: 2100000, guid: 0bc98984d53c71041a6f4f5c30b35ed1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Logomat
+    second: {fileID: 2100000, guid: 3600fd14f8208c548ba01b2e53839279, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Moustachemat
+    second: {fileID: 2100000, guid: ec35dd7d00eb854408f32d42f866b6dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Overallsmat
+    second: {fileID: 2100000, guid: eda800fce1f51cb4cb62411b6b29bf64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shirt_Capmat
+    second: {fileID: 2100000, guid: 4486cb23365a1d54cb37ccc9856062f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shoesmat
+    second: {fileID: 2100000, guid: e15a16a5be1b50b469d9d6de2342a483, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skinmat
+    second: {fileID: 2100000, guid: 807115223042153468b4e36cb8a54309, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Buttons
+    second: {fileID: 2800000, guid: fad60cbfb122a794b893ed001572e2c8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eyes
+    second: {fileID: 2800000, guid: eb40a91957bc93340a73d1cd80fb6181, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Hair_Piece
+    second: {fileID: 2800000, guid: c9f7e8b88249bfa498b32e717d30e56d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Logo
+    second: {fileID: 2800000, guid: 4ed566f90a008f44ca6ab93dc1babc92, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Moustache
+    second: {fileID: 2800000, guid: 831d77f483ccc9742bc16173ea25e4b1, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -24,7 +104,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -93,13 +173,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0

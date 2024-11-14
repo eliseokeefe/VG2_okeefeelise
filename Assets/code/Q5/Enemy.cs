@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
 {
     
     NavMeshAgent navAgent; 
+    Animator animator; 
     public Transform target;
     public Transform patrolRoute; 
     int patrolIndex; 
@@ -17,6 +18,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         navAgent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -37,9 +39,9 @@ public class Enemy : MonoBehaviour
             float priorityTargetDistance = Vector3.Distance(transform.position, priorityTarget.position);
             if(priorityTargetDistance <= chaseDistance){
                 target = priorityTarget;
-                GetComponent<Renderer>().material.color = Color.red;
-            } else {
-                GetComponent<Renderer>().material.color = Color.white;
+               // GetComponent<Renderer>().material.color = Color.red;
+          //  } else {
+               // GetComponent<Renderer>().material.color = Color.white;
                 
 
                 }
@@ -48,6 +50,7 @@ public class Enemy : MonoBehaviour
         if(target){
             navAgent.SetDestination(target.position);
         }
+        animator.SetFloat("velocity", navAgent.velocity.magnitude);
 
     }
 }
