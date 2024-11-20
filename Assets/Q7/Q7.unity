@@ -1371,7 +1371,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 83281bdc04ae212439b25b0f72b6c737, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.70871
+      value: 39.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 83281bdc04ae212439b25b0f72b6c737, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1379,7 +1379,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 83281bdc04ae212439b25b0f72b6c737, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 38.281475
+      value: 58.08
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 83281bdc04ae212439b25b0f72b6c737, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2034,7 +2034,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 1
+  m_BaseOffset: -0.11
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &1249634418
@@ -2052,7 +2052,7 @@ MonoBehaviour:
   target: {fileID: 2146913451}
   patrolRoute: {fileID: 0}
   priorityTarget: {fileID: 0}
-  chaseDistance: 0
+  chaseDistance: 10
 --- !u!1001 &1353398884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4667,7 +4667,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 1
+  m_BaseOffset: -0.11
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &2039632323
@@ -4683,9 +4683,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2146913451}
-  patrolRoute: {fileID: 0}
-  priorityTarget: {fileID: 0}
-  chaseDistance: 0
+  patrolRoute: {fileID: 1605080939}
+  priorityTarget: {fileID: 2146913451}
+  chaseDistance: 10
 --- !u!1 &2092670078
 GameObject:
   m_ObjectHideFlags: 0
