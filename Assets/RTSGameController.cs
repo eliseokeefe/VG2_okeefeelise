@@ -18,8 +18,12 @@ public class RTSGameController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
+      
+     
+
+
+
        Mouse mouse = Mouse.current;
        if(mouse != null){
 
@@ -77,7 +81,12 @@ public class RTSGameController : MonoBehaviour
                 RaycastHit[] hits = Physics.RaycastAll(selectionRaycast);
 
                 foreach(RaycastHit hit in hits){
+                    if(hit.collider.gameObject.layer != LayerMask.NameToLayer("Ground")){
+                        character.SetTarget(hit.collider.gameObject); 
+                        break; 
+                    }
                     if(hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground")){
+                        character.SetTarget(null); 
                         character.SetDestination(hit.point);
                     }
                 }
@@ -89,17 +98,21 @@ public class RTSGameController : MonoBehaviour
             Ray selectionRaycast = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
             RaycastHit[] hits = Physics.RaycastAll(selectionRaycast);
 
-            currentSelection.Clear();
+           // currentSelection.Clear();
+           DeselectAll(); 
+
             foreach(RaycastHit hit in hits){
                 if(hit.collider.GetComponent<RTSCharacterController>()){
                     currentSelection.Add(hit.collider.gameObject);
+                    hit.collider.SendMessage("Select", SendMessageOptions.DontRequireReceiver);
                 }
         }
        }
 
        void SelectWithinBox(){
         RTSCharacterController[] characterControllers = FindObjectsOfType<RTSCharacterController>();
-        currentSelection.Clear();
+        DeselectAll(); 
+        //currentSelection.Clear();
         foreach(RTSCharacterController character in characterControllers){
             Vector2 characterPosition = Camera.main.WorldToScreenPoint(character.transform.position);
             characterPosition = characterPosition / uiCanvas.scaleFactor;
@@ -113,11 +126,23 @@ public class RTSGameController : MonoBehaviour
             
             if(anchoredRect.Contains(characterPosition)){
                 currentSelection.Add(character.gameObject);
-        }
+                character.SendMessage("Select", SendMessageOptions.DontRequireReceiver); 
+            }
 
-       }
+         }
+     }
     }
 }
+
+     void DeselectAll(){
+        foreach(GameObject selection in currentSelection){
+            selection.SendMessage("Deselect", SendMessageOptions.DontRequireReceiver);
+        }
+        currentSelection.Clear();
     }
+
+   
+
+
 }
 }
